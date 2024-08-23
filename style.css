@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+#colorArea {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+#controls {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+#tempoSlider, #smoothnessSlider {
+    width: 100%;
+}
+
+#colorPicker {
+    margin: 10px 0;
+}
+
+#colorList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#colorList li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+#colorList li div {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+#colorList li button {
+    margin-left: auto;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rainbow</title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Projector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="content">
-			<div id="rainbow"></div>
-			<div class="rainbow_control">
-				<div class="input_with_hint">
-					<input type="number" id="varInput" required>
-					<label for="varInput">BPM</label>
-				</div>
-				<input type="range" id="varRange" min="30" max="240" value="120" step="1">
-				<div id="contColors"></div>
-				<button id="addColor">+</button>
-			</div>
-		</div>
-	</div>
+    <div id="colorArea"></div>
+    <div id="controls">
+        <label for="tempoSlider">Скорость смены цветов:</label>
+        <input type="range" id="tempoSlider" min="30" max="240" value="60">
+        <label for="tempoSlider">Темп (BPM): <span id="tempoValue">60</span></label> <br> <br>
+
+        <label for="smoothnessSlider">Плавность изменения цветов:</label>
+        <input type="range" id="smoothnessSlider" min="0" max="1" value="0.5" step="0.1"/>
+
+        <div id="colorPicker">
+            <input type="color" id="newColor" value="#ff0000">
+            <button id="addColor">Добавить цвет</button>
+        </div>
+
+        <ul id="colorList"></ul>
+    </div>
 </body>
 </html>
